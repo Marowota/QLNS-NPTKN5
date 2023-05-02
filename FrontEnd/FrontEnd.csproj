@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>FrontEnd</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Icons\DeleteIcon.png" />
+    <None Remove="Icons\EvaluateIcon.png" />
+    <None Remove="Icons\MainIcon.png" />
+    <None Remove="Icons\OpenIcon.png" />
+    <None Remove="Icons\SaveIcon.png" />
+    <None Remove="Icons\SortIcon.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Icons\MainIcon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="BackEnd">
+      <HintPath>..\BackEndDll\BackEnd.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Icons\DeleteIcon.png" />
+    <Resource Include="Icons\EvaluateIcon.png" />
+    <Resource Include="Icons\OpenIcon.png" />
+    <Resource Include="Icons\SaveIcon.png" />
+    <Resource Include="Icons\SortIcon.jpg" />
+  </ItemGroup>
+
+</Project>

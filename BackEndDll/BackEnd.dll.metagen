@@ -1,0 +1,54 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly BackEnd, Version=0.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class BackEnd.NhanSuWrapper: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(BackEnd.NhanSuWrapper): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(NhanSu*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String danhGia 'get set' : 
+    Double mucDoHoanThanh 'get set' : 
+    System.String donVi 'get set' : 
+    Int64 luong 'get set' : 
+    System.String chucVu 'get set' : 
+    System.String chucDanh 'get set' : 
+    System.String gioiTinh 'get set' : 
+    System.String namSinh 'get set' : 
+    System.String hoTen 'get set' : 
+    System.String MaSo 'get set' : 
+  Methods:
+    getNS(): PrivateScope, Public, HideBySig
+    setNS(NhanSu*): PrivateScope, Public, HideBySig
+    get_MaSo(): PrivateScope, Public, HideBySig, SpecialName
+    set_MaSo(String): PrivateScope, Public, HideBySig, SpecialName
+    get_hoTen(): PrivateScope, Public, HideBySig, SpecialName
+    set_hoTen(String): PrivateScope, Public, HideBySig, SpecialName
+    get_namSinh(): PrivateScope, Public, HideBySig, SpecialName
+    set_namSinh(String): PrivateScope, Public, HideBySig, SpecialName
+    get_gioiTinh(): PrivateScope, Public, HideBySig, SpecialName
+    set_gioiTinh(String): PrivateScope, Public, HideBySig, SpecialName
+    get_chucDanh(): PrivateScope, Public, HideBySig, SpecialName
+    set_chucDanh(String): PrivateScope, Public, HideBySig, SpecialName
+    get_chucVu(): PrivateScope, Public, HideBySig, SpecialName
+    set_chucVu(String): PrivateScope, Public, HideBySig, SpecialName
+    get_luong(): PrivateScope, Public, HideBySig, SpecialName
+    set_luong(Int64): PrivateScope, Public, HideBySig, SpecialName
+    get_donVi(): PrivateScope, Public, HideBySig, SpecialName
+    set_donVi(String): PrivateScope, Public, HideBySig, SpecialName
+    get_mucDoHoanThanh(): PrivateScope, Public, HideBySig, SpecialName
+    set_mucDoHoanThanh(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_danhGia(): PrivateScope, Public, HideBySig, SpecialName
+    set_danhGia(String): PrivateScope, Public, HideBySig, SpecialName
+Class BackEnd.BinarySearchTreeWrapper: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    printLNR(NhanSuWrapper[]): PrivateScope, Public, HideBySig
+    insertNode(NhanSuWrapper): PrivateScope, Public, HideBySig
+    findInfo(String): PrivateScope, Public, HideBySig
+    deleteNode(NhanSuWrapper): PrivateScope, Public, HideBySig
+    updateNode(NhanSuWrapper): PrivateScope, Public, HideBySig
+    analyze(): PrivateScope, Public, HideBySig

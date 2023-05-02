@@ -1,0 +1,119 @@
+﻿<UserControl x:Class="FrontEnd.UserControls.Card"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FrontEnd.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="260" d:DesignWidth="390">
+    <UserControl.Resources>
+        <ResourceDictionary Source="../Themes/CardTextBox.xaml"/>
+    </UserControl.Resources>
+    <Grid Margin="5" TextBlock.FontSize="15" >
+        <Border CornerRadius="6"
+                BorderThickness="0.25"
+                BorderBrush="Gray"
+                >
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                    <GradientStop Color="white" Offset="0.0"/>
+                    <GradientStop Color="WhiteSmoke" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            <Grid Width="auto" Height="auto" x:Name="CardGrid">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="5"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="5"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5"/>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition MinWidth="150"/>
+                    <ColumnDefinition Width="5"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Row="1" Grid.Column="1" Text="Ho ten:"/>
+                <TextBlock Grid.Row="2" Grid.Column="1" Text="Nam sinh:"/>
+                <TextBlock Grid.Row="3" Grid.Column="1" Text="Gioi tinh:"/>
+                <TextBlock Grid.Row="4" Grid.Column="1" Text="Chuc danh:"/>
+                <TextBlock Grid.Row="5" Grid.Column="1" Text="Chuc vu:"/>
+                <TextBlock Grid.Row="6" Grid.Column="1" Text="Luong:"/>
+                <TextBlock Grid.Row="7" Grid.Column="1" Text="Don vi:"/>
+                <TextBlock Grid.Row="8" Grid.Column="1" Text="Muc do hoan thanh:"/>
+                <TextBlock Grid.Row="9" Grid.Column="1" Text="Danh gia:"/>
+
+                <TextBox x:Name="HoTen"
+                         Grid.Row="1" Grid.Column="2" Style="{StaticResource ResourceKey=CardTextBox}"
+                         Text="{Binding Path=HoTen, UpdateSourceTrigger=PropertyChanged}"
+                         LostFocus="HoTen_LostFocus"
+                         KeyDown="HoTen_KeyDown"/>
+                <TextBox x:Name="NamSinh"
+                         Grid.Row="2" Grid.Column="2" Style="{StaticResource ResourceKey=CardTextBox}" 
+                         Text="{Binding Path=NamSinh, UpdateSourceTrigger=PropertyChanged}"
+                         LostFocus="NamSinh_LostFocus"
+                         KeyDown="NamSinh_KeyDown"/>
+                <TextBox x:Name="GioiTinh"
+                         Grid.Row="3" Grid.Column="2" Style="{StaticResource ResourceKey=CardTextBox}" 
+                         Text="{Binding Path=GioiTinh, UpdateSourceTrigger=PropertyChanged}"
+                         LostFocus="GioiTinh_LostFocus"
+                         KeyDown="GioiTinh_KeyDown"/>
+                <TextBox x:Name="ChucDanh"
+                         Grid.Row="4" Grid.Column="2" Style="{StaticResource ResourceKey=CardTextBox}" 
+                         Text="{Binding Path=ChucDanh, UpdateSourceTrigger=PropertyChanged}"
+                         LostFocus="ChucDanh_LostFocus"
+                         KeyDown="ChucDanh_KeyDown"/>
+                <TextBox x:Name="ChucVu"
+                         Grid.Row="5" Grid.Column="2" Style="{StaticResource ResourceKey=CardTextBox}" 
+                         Text="{Binding Path=ChucVu, UpdateSourceTrigger=PropertyChanged}"
+                         LostFocus="ChucVu_LostFocus"
+                         KeyDown="ChucVu_KeyDown"/>
+                <TextBox x:Name="Luong"
+                         Grid.Row="6" Grid.Column="2" Style="{StaticResource ResourceKey=CardTextBox}" 
+                         Text="{Binding Path=Luong, UpdateSourceTrigger=PropertyChanged}"
+                         LostFocus="Luong_LostFocus"
+                         KeyDown="Luong_KeyDown"/>
+                <TextBox x:Name="DonVi"
+                         Grid.Row="7" Grid.Column="2" Style="{StaticResource ResourceKey=CardTextBox}" 
+                         Text="{Binding Path=DonVi, UpdateSourceTrigger=PropertyChanged}"
+                         LostFocus="DonVi_LostFocus"
+                         KeyDown="DonVi_KeyDown"/>
+                <TextBox x:Name="MucDoHoanThanh"
+                         Grid.Row="8" Grid.Column="2" Style="{StaticResource ResourceKey=CardTextBox}" 
+                         Text="{Binding Path=MucDoHoanThanh, UpdateSourceTrigger=PropertyChanged}"
+                         LostFocus="MucDoHoanThanh_LostFocus"
+                         KeyDown="MucDoHoanThanh_KeyDown"/>
+                <TextBox x:Name="DanhGia"
+                         Grid.Row="9" Grid.Column="2" Style="{StaticResource ResourceKey=CardTextBox}" 
+                         Text="{Binding Path=DanhGia, UpdateSourceTrigger=PropertyChanged}"
+                         LostFocus="DanhGia_LostFocus"
+                         KeyDown="DanhGia_KeyDown"/>
+                <StackPanel Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="2" 
+                            HorizontalAlignment="Left" Orientation="Horizontal" FlowDirection="LeftToRight"
+                            TextBlock.Foreground="Blue">
+                    <Border Background="White" BorderThickness="0.5" BorderBrush="Gray"
+                            CornerRadius="5">
+                        <Button x:Name="DeleteCard" Background="Transparent" BorderThickness="0">
+                            <Button.Content>
+                                <TextBlock x:Name="DeleteCardContent" Text="Delete" Foreground="Red"/>
+                            </Button.Content>
+                        </Button>
+                    </Border>
+                    <TextBlock Text="ID:" Margin="50,0,0,0"/>
+                    <TextBlock MinWidth="100" 
+                             Foreground="Blue" Margin="10,0,0,0" 
+                             Text="{Binding Path=ID, UpdateSourceTrigger=PropertyChanged}"/>
+                </StackPanel>
+                <Button Width="0" Height="0" Name="UnFocusButton"/>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>
